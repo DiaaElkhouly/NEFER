@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // components/Footer.js
 export default function Footer() {
   function handelProfile() {
@@ -17,26 +18,25 @@ export default function Footer() {
         </div>
         <div className="flex justify-around">
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-vanilla text-gray-100">
+          <div className="-ml-3  ">
+            <h3 className="text-xl font-semibold text-vanilla text-gray-100">
               Quick Links
             </h3>
-            <ul className="mt-3 space-y-1 text-sm text-gray-100">
-              <li>
-                <a href="/#" className="hover:text-sparkle">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="/#" className="hover:text-sparkle">
-                  Our Members
-                </a>
-              </li>
-              <li>
-                <a href="/#" className="hover:text-sparkle">
-                  About NEFER
-                </a>
-              </li>
+            <ul className="mt-3 space-y-1  text-md text-gray-100 flex flex-col gap-1">
+              <Link to={"/ourMembers"}>
+                <li>
+                  <a href="" className="hover:text-sparkle">
+                    Our Members
+                  </a>
+                </li>
+              </Link>
+              <Link to={"/aboutNefer"}>
+                <li>
+                  <a href="" className="hover:text-sparkle">
+                    About NEFER
+                  </a>
+                </li>
+              </Link>
               <li>
                 <a href="/#" className="hover:text-sparkle">
                   Contact

@@ -4,6 +4,8 @@ import Body from "./components/body/body";
 import Footer from "./components/Footer/Footer";
 // router
 import Product from "./components/Products/Product";
+import AboutNefer from "./components/Footer/AboutNefer";
+import OurMembers from "./components/Footer/ourMembers";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -16,6 +18,26 @@ function App() {
           <>
             <Header />
             <Body />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/aboutNefer"
+        element={
+          <>
+            <Header />
+            <AboutNefer />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/ourMembers"
+        element={
+          <>
+            <Header />
+            <OurMembers />
             <Footer />
           </>
         }

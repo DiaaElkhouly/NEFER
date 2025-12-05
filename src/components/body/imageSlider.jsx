@@ -27,7 +27,7 @@ const MyCollection = [
   { label: "BODY LOTION - GINGHAM", imgPath: "./images/L-G.png" },
   {
     label: "Lip Palm",
-    imgPath: "./images/lip-palm.png",
+    imgPath: "./images/lip-palm-1.png",
   },
 ];
 
