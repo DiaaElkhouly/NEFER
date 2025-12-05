@@ -13,16 +13,21 @@ import { useSwipeable } from "react-swipeable";
 // Collection of images with their labels and paths
 const MyCollection = [
   {
-    label: "Body Splash",
-    imgPath: "/images/Vanilla-mockup.jpg",
+    label: "BODY SPLASH - COCONUT",
+    imgPath: "./images/S-C.png",
   },
   {
-    label: "Acne Cream",
-    imgPath: "/images/Acne-cream-circular.png",
+    label: "BODY SPLASH - GINGHAM",
+    imgPath: "./images/S-G.png",
   },
   {
-    label: "Deodorant",
-    imgPath: "/images/deodorant.png",
+    label: "BODY LOTION - COCONUT",
+    imgPath: "./images/L-C.png",
+  },
+  { label: "BODY LOTION - GINGHAM", imgPath: "./images/L-G.png" },
+  {
+    label: "Lip Palm",
+    imgPath: "./images/lip-palm.png",
   },
 ];
 
@@ -66,12 +71,12 @@ const ImageSlider = () => {
     >
       <div
         style={{
-          maxWidth: 300,
+          maxWidth: "20rem",
           flexGrow: 1,
         }}
       >
         <Paper
-          className="rounded-t-2xl"
+          className="rounded-t-2xl "
           square
           elevation={0}
           style={{
@@ -80,9 +85,10 @@ const ImageSlider = () => {
             paddingLeft: theme.spacing(4),
             backgroundColor: theme.palette.background.default,
             alignItems: "center",
+            background: "#e57d91",
           }}
         >
-          <p className=" text-2xl font-bold text-emerald-950">
+          <p className=" text-xl font-extrabold text-pink-950 -ml-4 ">
             {MyCollection[index].label}
           </p>
         </Paper>

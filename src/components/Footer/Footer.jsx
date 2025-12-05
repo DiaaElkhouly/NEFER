@@ -8,17 +8,20 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-5">
         {/* Logo & Brand */}
         <div>
-          <h2 className="text-2xl font-heading text-baccarat">CADENZA®</h2>
-          <p className="mt-2 text-sm text-gray-300">
-            Luxury scents & natural care. A symphony of elegance in every
-            product.
+          <h2 className="text-3xl font-bold text-baccarat text-gray-100 nefer-font">
+            NEFER®
+          </h2>
+          <p className="mt-2 text-lg font-normal text-center text-gray-300">
+            "The power of Egyptian heritage in every drop"
           </p>
         </div>
         <div className="flex justify-around">
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-vanilla">Quick Links</h3>
-            <ul className="mt-3 space-y-1 text-sm">
+            <h3 className="text-lg font-semibold text-vanilla text-gray-100">
+              Quick Links
+            </h3>
+            <ul className="mt-3 space-y-1 text-sm text-gray-100">
               <li>
                 <a href="/#" className="hover:text-sparkle">
                   Products
@@ -31,7 +34,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="/#" className="hover:text-sparkle">
-                  About CADENZA
+                  About NEFER
                 </a>
               </li>
               <li>
@@ -43,12 +46,10 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-gray-100">
             <h3 className="text-lg font-semibold text-vanilla">Get in Touch</h3>
-            <p className="mt-3 text-sm text-gray-300">
-              Email: info@cadenza.com
-            </p>
-            <p className="text-sm text-gray-300">Phone: +20 1153469099</p>
+            <p className="mt-3 text-sm text-gray-300">Email: info@nefer.com</p>
+            <p className="text-sm text-gray-300">Phone: +20 1201449924</p>
             <p className="text-sm text-gray-300">Location: Al Minya, Egypt</p>
           </div>
         </div>
@@ -59,7 +60,7 @@ export default function Footer() {
         © {new Date().getFullYear()}{" "}
         <span
           onClick={handelProfile}
-          className="text-xl font-bold text-emerald-950 cursor-pointer mr-0.5"
+          className="text-xl font-bold text-gray-900 cursor-pointer mr-0.5"
         >
           Diaa Elkhouly
         </span>
