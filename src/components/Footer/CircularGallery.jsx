@@ -382,7 +382,7 @@ class App {
       },
       {
         image: `./images/gallery/kamal.jpeg`,
-        text: "Deep Diving",
+        text: "Mahmoud Kamal",
       },
       {
         image: `./images/gallery/omar-a.jpeg`,
