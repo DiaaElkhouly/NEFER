@@ -6,9 +6,6 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 // components/Footer.js
 export default function Footer() {
-  function handelProfile() {
-    window.location.href = "https://www.facebook.com/diaa.elkhouly.3";
-  }
   return (
     <footer className="bg-cadenzaBlack text-cloud py-5 border-gray-700 border-t mt-2">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-1">
@@ -62,10 +59,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="mt-5 border-t border-gray-700 pt-3 text-center text-gray-400 text-lg">
         © {new Date().getFullYear()}{" "}
-        <span
-          onClick={handelProfile}
-          className="text-xl font-bold text-gray-900 cursor-pointer mr-0.5"
-        >
+        <span className="text-xl font-bold text-gray-900 mr-0.5">
           Diaa Elkhouly
         </span>
         - All rights reserved
@@ -73,7 +67,9 @@ export default function Footer() {
       <div className="flex justify-center gap-7 mt-1 ">
         <FacebookRoundedIcon
           style={{ fontSize: "30" }}
-          onclick={handelProfile}
+          onClick={() => {
+            window.location.href = "hhttps://www.facebook.com/diaa.elkhouly.3";
+          }}
           className=" cursor-pointer text-gray-900"
         />
         <GitHubIcon
