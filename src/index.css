@@ -15,11 +15,23 @@
 }
 
 body {
-  background: linear-gradient(135deg, #c5576d 0%, #850E35 100%);
+  background: linear-gradient(135deg, #9e4456 0%, #690b2b 100%);
   width: 100vw;
   font-family: 'Acme', sans-serif;
 }
 
 .nefer-font {
   font-family: 'Marcellus', serif;
+}
+
+/* Hide scrollbar for elements with no-scrollbar class */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

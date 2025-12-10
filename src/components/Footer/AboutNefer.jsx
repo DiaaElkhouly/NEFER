@@ -8,7 +8,7 @@ export default function AboutNefer() {
           About NEFER
         </h1>
         <div className="flex justify-center mb-3">
-          <img className="w-[40%]  " src="./images/Asset.png" alt="" />
+          <img className="w-40  " src="./images/Asset.png" alt="" />
         </div>
         <h1 className="text-xl font-normal text-baccarat text-center mb-4 nefer-font text-pink-950 bg-pink-300 rounded-2xl">
           The Face of Nefertiti

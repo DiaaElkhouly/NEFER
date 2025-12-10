@@ -1,3 +1,24 @@
-btn {
-    width: auto;
+.keyMessage-header::before {
+    content: "";
+    position: absolute;
+    left:0;
+    top: 8px;
+    width: 4px;
+    height: 3rem;
+    background: rgb(59, 14, 21);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+/* Responsive adjustments for the pseudo-element */
+@media (min-width: 768px) {
+    .keyMessage-header::before {
+        height: 2rem;
+        left: 13rem;
+        top: 3px;
+        border-radius: 4px;
+    }
 }
