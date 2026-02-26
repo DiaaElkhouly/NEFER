@@ -6,4 +6,6 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/NEFER/",
   plugins: [react(), tailwindcss()],
+  build: {    chunkSizeWarningLimit: 600,
+  },
 });

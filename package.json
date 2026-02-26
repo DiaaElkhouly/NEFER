@@ -1,6 +1,6 @@
 {
-  "homepage": "https://diaaelkhouly.github.io/NEFER/",
-  "name": "cadenza",
+  "homepage": "https://DiaaElkhouly.github.io/NEFER/",
+  "name": "nefer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -b gh-pages",
     "lint": "eslint .",
     "preview": "vite preview"
   },
