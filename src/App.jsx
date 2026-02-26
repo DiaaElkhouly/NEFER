@@ -1,52 +1,25 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Body from "./components/body/body";
-import Footer from "./components/Footer/Footer";
-// router
-import Product from "./components/Products/Product";
-import AboutNefer from "./components/Footer/AboutNefer";
-import OurMembers from "./components/Footer/ourMembers";
-import ScrollToTop from "./components/ScrollToTop";
-
 import { Route, Routes } from "react-router-dom";
+import { useScrollToTop } from "./hooks";
+import { HomePage, AboutPage, MembersPage, ProductPage } from "./features";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
+  useScrollToTop();
+
   return (
-    <div className="">
-      <ScrollToTop />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header />
-              <Body />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/aboutNefer"
-          element={
-            <>
-              <Header />
-              <AboutNefer />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/ourMembers"
-          element={
-            <>
-              <Header />
-              <OurMembers />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/:type/:productName" element={<Product />} />
-      </Routes>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/aboutNefer" element={<AboutPage />} />
+          <Route path="/ourMembers" element={<MembersPage />} />
+          <Route path="/:type/:productName" element={<ProductPage />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }

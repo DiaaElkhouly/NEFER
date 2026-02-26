@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+:root {
+  --nefer-gold: #d4af37;
+  --nefer-dark: #1a0a0a;
+  --nefer-red: #8b0000;
+  --nefer-burgundy: #690b2b;
+  --nefer-pink: #9e4456;
+  --lapis-blue: #26619c;
+}
+
 @font-face {
   font-family: 'Acme';
   src: url('./fonts/Acme-Regular.ttf') format('truetype');
@@ -15,8 +24,13 @@
 }
 
 body {
-  background: linear-gradient(135deg, #9e4456 0%, #690b2b 100%);
+  background:
+    radial-gradient(ellipse at top left, rgba(110, 69, 86, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(105, 11, 43, 0.4) 0%, transparent 50%),
+    linear-gradient(135deg, #9e4456 0%, #690b2b 100%);
   width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
   font-family: 'Acme', sans-serif;
 }
 
@@ -24,14 +38,135 @@ body {
   font-family: 'Marcellus', serif;
 }
 
-/* Hide scrollbar for elements with no-scrollbar class */
+.golden-glow {
+  text-shadow:
+    0.5px 0.5px 2px rgba(212, 175, 55, 0.5),
+    -1px -1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.golden-border {
+  border: 0.5rem solid var(--nefer-gold);
+  box-shadow:
+    inset 0 0 0.5rem var(--nefer-gold),
+    inset 0 0 4rem rgba(212, 175, 55, 0.2);
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 .no-scrollbar {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
+}
+
+/* Card Egyptian Effect */
+.card-egyptian:hover {
+  box-shadow:
+    0.25rem 0.25rem 1rem rgba(212, 175, 55, 0.4),
+    inset 0 0 0 var(--nefer-gold);
+}
+
+/* Navigation Link Enhancement */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 0.125rem;
+  margin: auto;
+  background: var(--nefer-gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  border-radius: 9999px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  transform: scaleX(1);
+}
+
+/* Loading Animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-gold {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes float-up {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(105, 11, 43, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--nefer-gold), var(--nefer-burgundy));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nefer-gold);
+}
+
+/* Selection color */
+::selection {
+  background: var(--nefer-gold);
+  color: var(--nefer-dark);
 }
